@@ -47,4 +47,89 @@
             , <&key_physical_attrs 100 100  950  372       0     0     0>
             ;
     };
+
+    /* 12-column alt physical layout */
+    physical_layout6: physical_layout_6 {
+        compatible = "zmk,physical-layout";
+        display-name = "LAYOUT_3x6_wide";
+        keys  //                     w   h     x     y     rot    rx    ry
+            = <&key_physical_attrs 100 100     0   112       0     0     0>   // Row 0 L col0
+            , <&key_physical_attrs 100 100   100    62       0     0     0>   // Row 0 L col1
+            , <&key_physical_attrs 100 100   200     0       0     0     0>   // Row 0 L col2
+            , <&key_physical_attrs 100 100   300    25       0     0     0>   // Row 0 L col3
+            , <&key_physical_attrs 100 100   400    38       0     0     0>   // Row 0 L col4
+            , <&key_physical_attrs 100 100 (-100)  112       0     0     0>   // Row 0 L col5 (new)
+            , <&key_physical_attrs 100 100   812    38       0     0     0>   // Row 0 R col6
+            , <&key_physical_attrs 100 100   912    25       0     0     0>   // Row 0 R col7
+            , <&key_physical_attrs 100 100  1012     0       0     0     0>   // Row 0 R col8
+            , <&key_physical_attrs 100 100  1112    62       0     0     0>   // Row 0 R col9
+            , <&key_physical_attrs 100 100  1212   112       0     0     0>   // Row 0 R col10
+            , <&key_physical_attrs 100 100  1312   112       0     0     0>   // Row 0 R col11 (new)
+
+            , <&key_physical_attrs 100 100     0   212       0     0     0>   // Row 1 L col0
+            , <&key_physical_attrs 100 100   100   162       0     0     0>   // Row 1 L col1
+            , <&key_physical_attrs 100 100   200   100       0     0     0>   // Row 1 L col2
+            , <&key_physical_attrs 100 100   300   125       0     0     0>   // Row 1 L col3
+            , <&key_physical_attrs 100 100   400   138       0     0     0>   // Row 1 L col4
+            , <&key_physical_attrs 100 100 (-100)  212       0     0     0>   // Row 1 L col5 (new)
+            , <&key_physical_attrs 100 100   812   138       0     0     0>   // Row 1 R col6
+            , <&key_physical_attrs 100 100   912   125       0     0     0>   // Row 1 R col7
+            , <&key_physical_attrs 100 100  1012   100       0     0     0>   // Row 1 R col8
+            , <&key_physical_attrs 100 100  1113   162       0     0     0>   // Row 1 R col9
+            , <&key_physical_attrs 100 100  1212   212       0     0     0>   // Row 1 R col10
+            , <&key_physical_attrs 100 100  1312   212       0     0     0>   // Row 1 R col11 (new)
+
+            , <&key_physical_attrs 100 100     0   312       0     0     0>   // Row 2 L col0
+            , <&key_physical_attrs 100 100   100   262       0     0     0>   // Row 2 L col1
+            , <&key_physical_attrs 100 100   200   200       0     0     0>   // Row 2 L col2
+            , <&key_physical_attrs 100 100   300   225       0     0     0>   // Row 2 L col3
+            , <&key_physical_attrs 100 100   400   238       0     0     0>   // Row 2 L col4
+            , <&key_physical_attrs 100 100 (-100)  312       0     0     0>   // Row 2 L col5 (new)
+            , <&key_physical_attrs 100 100   812   238       0     0     0>   // Row 2 R col6
+            , <&key_physical_attrs 100 100   912   225       0     0     0>   // Row 2 R col7
+            , <&key_physical_attrs 100 100  1012   200       0     0     0>   // Row 2 R col8
+            , <&key_physical_attrs 100 100  1112   262       0     0     0>   // Row 2 R col9
+            , <&key_physical_attrs 100 100  1212   312       0     0     0>   // Row 2 R col10
+            , <&key_physical_attrs 100 100  1312   312       0     0     0>   // Row 2 R col11 (new)
+
+            , <&key_physical_attrs 100 100   250   372       0     0     0>   // Row 3 L thumb
+            , <&key_physical_attrs 100 100   350   372       0     0     0>   // Row 3 L thumb
+            , <&key_physical_attrs 100 100   450   372       0     0     0>   // Row 3 L thumb
+            , <&key_physical_attrs 100 100   750   372       0     0     0>   // Row 3 R thumb
+            , <&key_physical_attrs 100 100   850   372       0     0     0>   // Row 3 R thumb
+            , <&key_physical_attrs 100 100   950   372       0     0     0>   // Row 3 R thumb
+            ;
+    };
+
+    /* Position map to translate bindings between the default (10-col) and wide (12-col) layouts */
+    position_map {
+        compatible = "zmk,physical-layout-position-map";
+        complete;
+
+        default_map: default_map {
+            physical-layout = <&physical_layout0>;
+            positions = <
+                0  1  2  3  4  35   // Row 0 L + extra maps to last default index
+                5  6  7  8  9  34   // Row 0 R + extra maps to 34
+                10 11 12 13 14 33   // Row 1 L + extra maps to 33
+                15 16 17 18 19 32   // Row 1 R + extra maps to 32
+                20 21 22 23 24 31   // Row 2 L + extra maps to 31
+                25 26 27 28 29 30   // Row 2 R + extra maps to 30
+                30 31 32 33 34 35   // Thumbs unchanged
+            >;
+        };
+
+        wide_map: wide_map {
+            physical-layout = <&physical_layout6>;
+            positions = <
+                0  1  2  3  4  5    // Row 0 L (6 cols)
+                6  7  8  9 10 11    // Row 0 R (6 cols)
+                12 13 14 15 16 17   // Row 1 L (6 cols)
+                18 19 20 21 22 23   // Row 1 R (6 cols)
+                24 25 26 27 28 29   // Row 2 L (6 cols)
+                30 31 32 33 34 35   // Row 2 R (6 cols)
+                36 37 38 39 40 41   // Thumbs unchanged
+            >;
+        };
+    };
 };

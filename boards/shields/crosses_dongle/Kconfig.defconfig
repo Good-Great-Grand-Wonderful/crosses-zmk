@@ -1,0 +1,23 @@
+if SHIELD_CROSSES_DONGLE
+
+config ZMK_KEYBOARD_NAME
+  default "Crosses Dongle"
+
+config ZMK_SPLIT
+  default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+  default y
+
+# Number of peripherals the dongle will manage (left + right halves)
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+  default 2
+
+# Bluetooth connection/pairing counts (peripherals + host profiles)
+config BT_MAX_CONN
+  default 6
+
+config BT_MAX_PAIRED
+  default 6
+
+endif

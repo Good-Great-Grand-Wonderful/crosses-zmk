@@ -172,63 +172,63 @@
 
         default_layer {
             bindings = <
-&lt 6 Q          &kp W            &kp F         &kp P              &kp B  &kp J        &kp L               &kp U         &kp Y             &lt 6 SEMI
-&hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G  &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O
-&kp Z            &kp X            &kp C         &kp D              &kp V  &kp K        &kp H               &kp COMMA     &kp DOT           &lt 4 SLASH
+&lt 6 Q          &kp W            &kp F         &kp P              &kp B  &none        &kp J               &kp L         &kp U             &kp Y             &lt 6 SEMI           &none
+&hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G  &none        &kp M               &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &none
+&kp Z            &kp X            &kp C         &kp D              &kp V  &none        &kp K               &kp H               &kp COMMA     &kp DOT           &lt 4 SLASH         &none
                                   &kp LEFT_GUI  &lt 3 ESCAPE       &mo 1  &lt 2 ENTER  &kp BACKSPACE       &lt 5 DELETE
             >;
         };
 
         mouse {
             bindings = <
-&trans          &trans     &trans        &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &mkp RCLK  &mkp MCLK     &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans     &trans        &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans     &trans        &trans     &trans  &none   &trans  &trans  &trans  &trans  &trans  &none
+&kp LEFT_SHIFT  &mkp RCLK  &mkp MCLK     &mkp LCLK  &trans  &none   &trans  &trans  &trans  &trans  &trans  &none
+&trans          &trans     &trans        &trans     &trans  &none   &trans  &trans  &trans  &trans  &trans  &none
                            &kp LEFT_ALT  &kp LCTRL  &tog 1  &trans  &trans  &trans
             >;
         };
 
         num {
             bindings = <
-&kp LS(STAR)  &kp N7  &kp N8  &kp N9              &kp BSLH      &kp FSLH       &kp LS(LPAR)           &kp LS(RPAR)         &kp PIPE              &trans
-&kp MINUS     &kp N4  &kp N5  &hml LEFT_SHIFT N6  &kp LS(PLUS)  &kp LS(PRCNT)  &hmr RIGHT_SHIFT LBRC  &hmr LS(RCTRL) RBRC  &hmr RIGHT_ALT COLON  &hmr RIGHT_GUI SEMICOLON
-&kp GRAVE     &kp N1  &kp N2  &kp N3              &kp EQUAL     &kp LBKT       &kp RBKT               &trans               &trans                &trans
+&kp LS(STAR)  &kp N7  &kp N8  &kp N9              &kp BSLH      &none          &kp FSLH               &kp LS(LPAR)         &kp LS(RPAR)          &kp PIPE              &trans                &none
+&kp MINUS     &kp N4  &kp N5  &hml LEFT_SHIFT N6  &kp LS(PLUS)  &none          &kp LS(PRCNT)          &hmr RIGHT_SHIFT LBRC  &hmr LS(RCTRL) RBRC  &hmr RIGHT_ALT COLON  &hmr RIGHT_GUI SEMICOLON  &none
+&kp GRAVE     &kp N1  &kp N2  &kp N3              &kp EQUAL     &none          &kp LBKT               &kp RBKT             &trans                &trans                 &trans                 &none
                       &trans  &kp N0              &trans        &trans         &trans                 &trans
             >;
         };
 
         nav {
             bindings = <
-&none     &none     &none      &none       &none        &none  &none           &none           &none          &none
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &none        &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW
-&none     &none     &none      &kp K_COPY  &kp K_PASTE  &none  &kp C_AC_HOME   &kp END         &kp PAGE_DOWN  &kp PAGE_UP
+&none     &none     &none      &none       &none        &none  &none           &none           &none          &none          &none  &none
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &none        &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &none  &none
+&none     &none     &none      &kp K_COPY  &kp K_PASTE  &none  &kp C_AC_HOME   &kp END         &kp PAGE_DOWN  &kp PAGE_UP     &none  &none
                     &none      &none       &none        &none  &none           &none
             >;
         };
 
         media {
             bindings = <
-&none       &none              &none             &none            &none       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR
-&kp C_PREV  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_NEXT  &none  &none         &none         &none         &none
-&none       &none              &none             &none            &none       &none  &none         &none         &none         &none
+&none       &none              &none             &none            &none       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR       &none  &none
+&kp C_PREV  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_NEXT  &none  &none         &none         &none         &none             &none  &none
+&none       &none              &none             &none            &none       &none  &none         &none         &none         &none             &none  &none
                                &none             &none            &none       &none  &none         &none
             >;
         };
 
         func {
             bindings = <
-&kp F11  &kp F12  &trans  &trans  &trans   &trans  &trans     &trans     &trans    &trans
-&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &trans  &trans     &trans     &trans    &trans
+&kp F11  &kp F12  &trans  &trans  &trans   &none   &trans     &trans     &trans    &trans    &trans  &none
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &none   &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans  &none
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &none   &trans     &trans     &trans    &trans    &trans  &none
                   &trans  &trans  &trans   &trans  &trans     &trans
             >;
         };
 
         BT {
             bindings = <
-&trans      &trans  &studio_unlock  &trans  &bootloader     &bootloader  &trans        &trans        &trans        &trans
-&trans      &trans  &trans          &trans  &trans          &trans       &bt_profile0  &bt_profile1  &bt_profile2  &bt_profile3
-&bt BT_CLR  &trans  &trans          &trans  &bt BT_CLR_ALL  &trans       &trans        &trans        &trans        &trans
+&trans      &trans  &studio_unlock  &trans  &bootloader     &none        &bootloader   &trans        &trans        &trans        &trans  &none
+&trans      &trans  &trans          &trans  &trans          &none        &bt_profile0  &bt_profile1  &bt_profile2  &bt_profile3  &trans  &none
+&bt BT_CLR  &trans  &trans          &trans  &bt BT_CLR_ALL  &none        &trans        &trans        &trans        &trans        &trans  &none
                     &trans          &trans  &trans          &trans       &trans        &trans
             >;
         };

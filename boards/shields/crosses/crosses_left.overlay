@@ -8,11 +8,17 @@
     , <&pro_micro 10 GPIO_ACTIVE_HIGH>
     , <&pro_micro 16 GPIO_ACTIVE_HIGH>
     , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+    , <&gpio1 11 GPIO_ACTIVE_HIGH>
     ;
 };
 
 &trackball_peripheral_listener {
   status = "okay";
+};
+
+/* ZMK v0.3.0: Peripheral input-split requires a 'device' property pointing to the source device */
+&trackball_peripheral_split {
+  device = <&trackball_central>;
 };
 
 &spi0 {
@@ -44,4 +50,5 @@
 &trackball_central_listener {
   status = "okay";
   device = <&trackball_central>;
-}; 
+};
+ 

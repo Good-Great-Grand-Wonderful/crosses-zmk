@@ -22,9 +22,15 @@ include:
   - board: nice_nano_v2
     shield: crosses_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano_v2
     shield: crosses_right
     snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  - board: seeeduino_xiao_ble
+    shield: dongle_screen crosses_dongle
+    artifact-name: crosses-dongle-screen-xiao
   - board: nice_nano_v2
+    shield: settings_reset
+  - board: seeeduino_xiao_ble
     shield: settings_reset
